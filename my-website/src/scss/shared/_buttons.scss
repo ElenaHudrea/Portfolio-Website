@@ -1,0 +1,23 @@
+.primary-button {
+  background-color: $primary-color;
+  color: $color-white;
+  text-decoration: none;
+  padding: 1.3rem 3rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+
+  &.transp {
+    border: 0.2rem solid $primary-color;
+    background-color: transparent;
+    color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+}

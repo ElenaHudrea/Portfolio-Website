@@ -1,4 +1,5 @@
 @import "../shared/variables";
+@import "../shared/buttons";
 
 #nav-fixed {
   margin: 0 auto;
@@ -14,7 +15,6 @@
 
 .navigation-component {
   padding: 4rem 2rem 3rem 2rem;
-  width: 75%;
   margin: 0 auto;
 
   .elements-nav {
@@ -25,7 +25,7 @@
   }
 
   .logo {
-    width: 20rem;
+    width: 18rem;
     height: fit-content;
 
     @media screen and (max-width: $lg-screen) {
@@ -45,11 +45,11 @@
     gap: 10rem;
 
     @media screen and (max-width: $max-width) {
-      gap: 6rem;
+      gap: 4rem;
     }
 
     @media screen and (max-width: 1250px) {
-      gap: 4rem;
+      gap: 2rem;
     }
   }
 
@@ -58,17 +58,9 @@
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
-    gap: 7rem;
+    gap: 4rem;
     list-style: none;
     padding: 0;
-
-    @media screen and (max-width: $max-width) {
-      gap: 4rem;
-    }
-
-    @media screen and (max-width: $lg-screen-max) {
-      gap: 2rem;
-    }
   }
 
   .link-menu {
@@ -76,7 +68,7 @@
     display: inline-block;
     text-decoration: none;
     font-size: 1.8rem;
-    font-weight: 500;
+    font-weight: 400;
     color: $color-black;
 
     &.active {
@@ -148,7 +140,7 @@
       margin: 0.4rem auto;
       -webkit-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
-      background-color: $color-black;
+      background-color: $color-white;
     }
   }
 
@@ -178,7 +170,7 @@
 
       &.nav {
         background-color: $primary-color;
-        color: $color-black;
+        color: $color-white;
 
         &:hover {
           background-color: $primary-color-hover;

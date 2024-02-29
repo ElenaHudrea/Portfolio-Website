@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import "./_Navigation.scss";
-import logo from "../../../image/logo/logo-blue.png";
+import logo from "../../image/logo/logoBlue.png";
 
 function Navigation() {
   return (
@@ -39,6 +39,14 @@ function Navigation() {
               </Link>
             </li>
           </ul>
+          <Link to="/contact" id="nav-btn" className="primary-button">
+            Contact
+          </Link>
+        </div>
+        <div className="hamburger">
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
         </div>
       </div>
     </nav>
