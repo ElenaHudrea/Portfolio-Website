@@ -1,0 +1,18 @@
+---- Colors
+$background: #c;
+$accent-color: #193f6e;
+$accent-color-hover: #3b6ba5;
+
+$blue: #72a5d3;
+$blue-light: #b1d3e3;
+
+---- Font
+$rubik: "Rubik", sans-serif;
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+I’m Elena Hudrea, a Junior Frontend Developer with a deep passion for this field. I found this passion a few years ago and since then I have been in continuous learning. I have cultivated various skills that help me pay great attention to details.
+I have a strong will for learning new things and I am also a curious person which takes the problems as an opportunity of improving my skills. I love spending time coding and encountering new challenges.
