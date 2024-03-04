@@ -308,10 +308,204 @@ body {
 /* Colors */
 /* Breakpoints */
 /* Fonts */
+.primary-button {
+  background-color: #193f6e;
+  color: #fbfbfb;
+  text-decoration: none;
+  padding: 1.2rem 3.2rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.primary-button:hover {
+  background-color: #3b6ba5;
+}
+.primary-button.transp {
+  border: 0.2rem solid #193f6e;
+  background-color: transparent;
+  color: #193f6e;
+}
+.primary-button.transp:hover {
+  background-color: #b1d3e3;
+}
+
+.about-me-component {
+  padding: 22% 0;
+  height: 65rem;
+  background: url("../../image/sections-img/wave-top.png") top/100% auto, url("../../image/sections-img/wave-bottom.png") bottom/100% auto, linear-gradient(#b1d3e3, #b1d3e3) content-box;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 991px) {
+  .about-me-component {
+    height: 105rem;
+  }
+}
+.about-me-component .title {
+  font-size: 6rem;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 2rem auto;
+}
+.about-me-component .title::after {
+  content: url("../../image/icons-illustrations/line.svg");
+  position: absolute;
+  bottom: -5.5rem;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .about-me-component .title {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+}
+.about-me-component .content {
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 991px) {
+  .about-me-component .content {
+    flex-direction: column-reverse;
+    gap: 8rem;
+    margin-top: 5rem;
+  }
+}
+.about-me-component .container-img {
+  max-width: 50rem;
+  width: 100%;
+  height: 100%;
+}
+.about-me-component .container-img img {
+  width: 100%;
+  height: 100%;
+}
+.about-me-component .text {
+  border-bottom: 0.3rem solid #193f6e;
+  padding-bottom: 1rem;
+  position: relative;
+}
+.about-me-component .text .accent-blue {
+  color: #193f6e;
+  font-weight: 500;
+}
+.about-me-component .info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0 3rem 0;
+}
+.about-me-component .information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.about-me-component .info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.about-me-component .info-text:hover {
+  color: #193f6e;
+}
+.about-me-component .description {
+  width: 50%;
+}
+@media screen and (max-width: 991px) {
+  .about-me-component .description {
+    width: 100%;
+  }
+}
+.about-me-component .buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Colors */
+/* Breakpoints */
+/* Fonts */
+.primary-button {
+  background-color: #193f6e;
+  color: #fbfbfb;
+  text-decoration: none;
+  padding: 1.2rem 3.2rem;
+  border-radius: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.primary-button:hover {
+  background-color: #3b6ba5;
+}
+.primary-button.transp {
+  border: 0.2rem solid #193f6e;
+  background-color: transparent;
+  color: #193f6e;
+}
+.primary-button.transp:hover {
+  background-color: #b1d3e3;
+}
+
+.contact-component {
+  margin-bottom: 10rem;
+  display: flex;
+  gap: 8rem;
+}
+@media screen and (max-width: 991px) {
+  .contact-component {
+    flex-direction: column;
+    gap: 6rem;
+  }
+}
+.contact-component .title {
+  font-size: 6rem;
+  color: #193f6e;
+  font-weight: 500;
+}
+.contact-component .description {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contact-component .info-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0 3rem 0;
+}
+.contact-component .information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.contact-component .info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.contact-component .info-text:hover {
+  color: #193f6e;
+}
+.contact-component .buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+.contact-component .container-form {
+  max-width: 50rem;
+  width: 100%;
+  border: 0.2rem solid #193f6e;
+  border-radius: 1rem;
+}
+
+/* Colors */
+/* Breakpoints */
+/* Fonts */
 .hero-component {
   position: relative;
   display: flex;
-  padding: 0 2rem;
+  padding: 5rem 2rem 0;
   gap: 12rem;
   position: relative;
   align-items: center;
@@ -330,7 +524,7 @@ body {
 }
 @media screen and (max-width: 992px) {
   .hero-component {
-    gap: 5rem;
+    gap: 0rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -339,17 +533,12 @@ body {
   }
 }
 .hero-component .hero-title {
-  width: 60%;
+  width: 100%;
   color: #222222;
   font-family: "Rubik", sans-serif;
   font-size: 6rem;
   margin-bottom: 3rem;
   font-weight: 500;
-}
-@media screen and (max-width: 991px) {
-  .hero-component .hero-title {
-    width: 100%;
-  }
 }
 @media screen and (max-width: 992px) {
   .hero-component .hero-title {
@@ -359,6 +548,7 @@ body {
 @media screen and (max-width: 768px) {
   .hero-component .hero-title {
     font-size: 4rem;
+    margin-bottom: 1rem;
   }
 }
 .hero-component .hero-title .accent-blue {
@@ -377,7 +567,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hero-component .hero-text {
-    font-size: 1.6rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -402,6 +593,9 @@ body {
     flex-direction: column;
   }
 }
+.hero-component .container-btn {
+  padding: 1.2rem 0;
+}
 .hero-component .buttons-container {
   display: flex;
   flex-wrap: wrap;
@@ -412,6 +606,12 @@ body {
 @media screen and (max-width: 991px) {
   .hero-component .buttons-container {
     justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .buttons-container {
+    margin-top: 4rem;
+    gap: 1rem;
   }
 }
 .hero-component .profiles {

@@ -1,0 +1,106 @@
+@import "../shared/variables";
+@import "../shared/buttons";
+
+.about-me-component {
+  padding: 22% 0;
+  height: 65rem;
+  background: url("../../image/sections-img/wave-top.png") top / 100% auto,
+    url("../../image/sections-img/wave-bottom.png") bottom/100% auto,
+    linear-gradient($blue-light, $blue-light) content-box;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: $sm-screen-max) {
+    height: 105rem;
+  }
+
+  .title {
+    font-size: 6rem;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 2rem auto;
+
+    &::after {
+      content: url("../../image/icons-illustrations/line.svg");
+      position: absolute;
+      bottom: -5.5rem;
+      left: 0;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 4rem;
+      margin-top: 5rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    gap: 8rem;
+    align-items: center;
+    padding: 0 2rem;
+
+    @media screen and (max-width: $sm-screen-max) {
+      flex-direction: column-reverse;
+      gap: 8rem;
+      margin-top: 5rem;
+    }
+  }
+
+  .container-img {
+    max-width: 50rem;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text {
+    border-bottom: 0.3rem solid $primary-color;
+    padding-bottom: 1rem;
+    position: relative;
+
+    .accent-blue {
+      color: $primary-color;
+      font-weight: 500;
+    }
+  }
+
+  .info-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 3rem 0 3rem 0;
+  }
+
+  .information {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .info-text {
+    text-decoration: none;
+    color: $color-black;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .description {
+    width: 50%;
+
+    @media screen and (max-width: $sm-screen-max) {
+      width: 100%;
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 1rem;
+  }
+}

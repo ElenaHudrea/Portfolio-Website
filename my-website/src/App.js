@@ -15,14 +15,19 @@ function App() {
     <div>
       <Navigation />
       <Home />
+      <AboutMe />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
 
       <Routes>
-        <Route path="/" exact element={Home} />
-        <Route path="/about-me" exact element={AboutMe} />
-        <Route path="/skills" exact element={Skills} />
-        <Route path="/experience" exact element={Experience} />
-        <Route path="/projects" exact element={Projects} />
-        <Route path="/contact" exact element={Contact} />
+        <Route path="#Home" exact element={Home} />
+        <Route path="#about-me" element={AboutMe} />
+        <Route path="#skills" element={Skills} />
+        <Route path="#experience" element={Experience} />
+        <Route path="#projects" element={Projects} />
+        <Route path="#contact" element={Contact} />
       </Routes>
     </div>
   );

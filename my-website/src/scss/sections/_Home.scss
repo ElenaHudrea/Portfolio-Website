@@ -2,7 +2,7 @@
 .hero-component {
   position: relative;
   display: flex;
-  padding: 0 2rem;
+  padding: 5rem 2rem 0;
   gap: 12rem;
   position: relative;
   align-items: center;
@@ -18,7 +18,7 @@
   }
 
   @media screen and (max-width: $md-screen) {
-    gap: 5rem;
+    gap: 0rem;
   }
 
   .hero-description {
@@ -28,16 +28,12 @@
   }
 
   .hero-title {
-    width: 60%;
+    width: 100%;
     color: $color-black;
     font-family: $rubik;
     font-size: 6rem;
     margin-bottom: 3rem;
     font-weight: 500;
-
-    @media screen and (max-width: $sm-screen-max) {
-      width: 100%;
-    }
 
     @media screen and (max-width: $md-screen) {
       margin-bottom: 2rem;
@@ -45,6 +41,7 @@
 
     @media screen and (max-width: $sm-screen) {
       font-size: 4rem;
+      margin-bottom: 1rem;
     }
 
     .accent-blue {
@@ -63,7 +60,8 @@
     }
 
     @media screen and (max-width: $sm-screen) {
-      font-size: 1.6rem;
+      font-size: 3rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -92,6 +90,10 @@
     }
   }
 
+  .container-btn {
+    padding: 1.2rem 0;
+  }
+
   .buttons-container {
     display: flex;
     flex-wrap: wrap;
@@ -101,6 +103,11 @@
 
     @media screen and (max-width: $sm-screen-max) {
       justify-content: center;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      margin-top: 4rem;
+      gap: 1rem;
     }
   }
 
