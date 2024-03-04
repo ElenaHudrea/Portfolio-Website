@@ -16,7 +16,8 @@ function Home() {
   }
 
   function downloadHandler() {
-    const pdfUrl = "../my-website/src/scss/HudreaElenaCV.pdf";
+    const pdfUrl =
+      "https://github.com/ElenaHudrea/Portfolio-Website/blob/main/my-website/src/scss/HudreaElenaCV.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Elena Hudrea-CV.pdf";
