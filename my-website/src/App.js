@@ -8,13 +8,13 @@ import Experience from "./scss/sections/Experience";
 import Projects from "./scss/sections/Projects";
 import Contact from "./scss/sections/Contact";
 
-import Container from "./scss/components/Container";
 import Navigation from "./scss/components/Navigation";
 
 function App() {
   return (
-    <Container>
+    <div>
       <Navigation />
+      <Home />
 
       <Routes>
         <Route path="/" exact element={Home} />
@@ -24,7 +24,7 @@ function App() {
         <Route path="/projects" exact element={Projects} />
         <Route path="/contact" exact element={Contact} />
       </Routes>
-    </Container>
+    </div>
   );
 }
 

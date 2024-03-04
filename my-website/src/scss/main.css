@@ -25,10 +25,11 @@ body {
   background-color: #193f6e;
   color: #fbfbfb;
   text-decoration: none;
-  padding: 1.3rem 3rem;
+  padding: 1.2rem 3.2rem;
   border-radius: 1rem;
   font-weight: 400;
   white-space: nowrap;
+  cursor: pointer;
 }
 .primary-button:hover {
   background-color: #3b6ba5;
@@ -39,7 +40,7 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #3b6ba5;
+  background-color: #b1d3e3;
 }
 
 .container {
@@ -75,10 +76,11 @@ body {
   background-color: #193f6e;
   color: #fbfbfb;
   text-decoration: none;
-  padding: 1.3rem 3rem;
+  padding: 1.2rem 3.2rem;
   border-radius: 1rem;
   font-weight: 400;
   white-space: nowrap;
+  cursor: pointer;
 }
 .primary-button:hover {
   background-color: #3b6ba5;
@@ -89,7 +91,7 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #3b6ba5;
+  background-color: #b1d3e3;
 }
 
 #nav-fixed {
@@ -301,4 +303,124 @@ body {
   .navigation-component .hamburger.active .bar:nth-child(3) {
     transform: translateY(-0.7rem) rotate(-45deg);
   }
+}
+
+/* Colors */
+/* Breakpoints */
+/* Fonts */
+.hero-component {
+  position: relative;
+  display: flex;
+  padding: 0 2rem;
+  gap: 12rem;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1400px) {
+  .hero-component {
+    gap: 4rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-component {
+    flex-direction: column;
+    gap: 8rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero-component {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .hero-component .hero-description {
+    text-align: center;
+  }
+}
+.hero-component .hero-title {
+  width: 60%;
+  color: #222222;
+  font-family: "Rubik", sans-serif;
+  font-size: 6rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+@media screen and (max-width: 991px) {
+  .hero-component .hero-title {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .hero-component .hero-title {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .hero-title {
+    font-size: 4rem;
+  }
+}
+.hero-component .hero-title .accent-blue {
+  color: #193f6e;
+}
+.hero-component .hero-text {
+  line-height: 4rem;
+  margin-bottom: 3rem;
+  color: #3b6ba5;
+  font-size: 4rem;
+}
+@media screen and (max-width: 992px) {
+  .hero-component .hero-text {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .hero-text {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hero-component .primary-button {
+    font-size: 1.4rem;
+  }
+}
+.hero-component .hero-img {
+  max-width: 50rem;
+  width: 100%;
+  height: 100%;
+}
+.hero-component .hero-img img {
+  width: 100%;
+  height: 100%;
+}
+.hero-component.left-img {
+  flex-direction: row-reverse;
+}
+@media screen and (max-width: 991px) {
+  .hero-component.left-img {
+    flex-direction: column;
+  }
+}
+.hero-component .buttons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 6.5rem;
+}
+@media screen and (max-width: 991px) {
+  .hero-component .buttons-container {
+    justify-content: center;
+  }
+}
+.hero-component .profiles {
+  max-width: 3rem;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.hero-component .profiles img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=main.css.map */
