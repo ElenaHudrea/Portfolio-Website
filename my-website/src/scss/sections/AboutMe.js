@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPhone,
   faEnvelope,
-  faLocation,
+  faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
 
 import Container from "../components/Container";
@@ -57,7 +57,7 @@ function AboutMe() {
             <div className="info-contact">
               <div className="information">
                 <div className="info-img">
-                  <FontAwesomeIcon icon={faLocation} className="icon" />
+                  <FontAwesomeIcon icon={faLocationDot} className="icon" />
                 </div>
                 <Link onClick={openLocationHandler} className="info-text">
                   Cluj-Napoca, Romania
