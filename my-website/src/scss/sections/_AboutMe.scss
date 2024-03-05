@@ -10,7 +10,12 @@
   background-repeat: no-repeat;
 
   @media screen and (max-width: $sm-screen-max) {
+    margin-bottom: 5rem;
     height: 105rem;
+  }
+
+  @media screen and (max-width: 420px) {
+    height: 98rem;
   }
 
   .title {
@@ -42,7 +47,7 @@
 
     @media screen and (max-width: $sm-screen-max) {
       flex-direction: column-reverse;
-      gap: 8rem;
+      gap: 5rem;
       margin-top: 5rem;
     }
   }
@@ -67,12 +72,16 @@
       color: $primary-color;
       font-weight: 500;
     }
+
+    @media screen and (max-width: $sm-screen-max) {
+      text-align: center;
+    }
   }
 
   .info-contact {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem;
     margin: 3rem 0 3rem 0;
   }
 
@@ -89,6 +98,12 @@
     &:hover {
       color: $primary-color;
     }
+  }
+
+  .icon {
+    color: $primary-color;
+    width: 2.5rem;
+    height: 2.5rem;
   }
 
   .description {

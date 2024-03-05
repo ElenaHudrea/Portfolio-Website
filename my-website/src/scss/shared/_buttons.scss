@@ -8,6 +8,10 @@
   white-space: nowrap;
   cursor: pointer;
 
+  @media screen and (max-width: $sm-screen) {
+    font-size: 1.4rem;
+  }
+
   &:hover {
     background-color: $primary-color-hover;
   }

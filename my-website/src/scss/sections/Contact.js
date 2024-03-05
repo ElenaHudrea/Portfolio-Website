@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
-import Container from "../components/Container";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
+import {
+  faLinkedin,
+  faFacebook,
+  faInstagram,
+} from "@fortawesome/free-brands-svg-icons";
+
+import Container from "../components/Container";
+import Form from "../components/Form";
 import "./_Contact.scss";
-import phone from "../../image/icons-illustrations/phone.png";
-import email from "../../image/icons-illustrations/email.png";
-import imgLinkedin from "../../image/icons-illustrations/linkedinIcon.png";
-import imgFacebook from "../../image/icons-illustrations/facebook.png";
-import imgInstagram from "../../image/icons-illustrations/instagram.png";
 
 function Contact() {
   function openLinkedinHandler() {
@@ -26,6 +30,16 @@ function Contact() {
   function openInstagramHandler() {
     window.open("https://www.instagram.com/elenahudrea/", "_blank");
   }
+
+  function getFormData(inputData) {
+    fetch(
+      "https://portfolio-website-1ad68-default-rtdb.firebaseio.com/formInfo.json",
+      {
+        method: "POST",
+        body: JSON.stringify(inputData),
+      }
+    );
+  }
   return (
     <Container>
       <div className="contact-component" id="contact">
@@ -35,7 +49,7 @@ function Contact() {
           <div className="info-contact">
             <div className="information">
               <div className="info-img">
-                <img src={phone} alt="phone icon"></img>
+                <FontAwesomeIcon icon={faPhone} className="icon" />
               </div>
               <Link to="tel:+40745667893" className="info-text">
                 +4074540923
@@ -43,7 +57,7 @@ function Contact() {
             </div>
             <div className="information">
               <div className="info-img">
-                <img src={email} alt="email icon"></img>
+                <FontAwesomeIcon icon={faEnvelope} className="icon" />
               </div>
               <Link to="mailto:elena.hudrea@yahoo.com" className="info-text">
                 elena.hudrea@yahoo.com
@@ -53,18 +67,20 @@ function Contact() {
 
           <div className="buttons-container">
             <div onClick={openFacebookHandler} className="profiles">
-              <img src={imgFacebook} alt="Facebook"></img>
+              <FontAwesomeIcon icon={faFacebook} className="icon-btn" />
             </div>
             <div onClick={openInstagramHandler} className="profiles">
-              <img src={imgInstagram} alt="Instagram"></img>
+              <FontAwesomeIcon icon={faInstagram} className="icon-btn" />
             </div>
             <div onClick={openLinkedinHandler} className="profiles">
-              <img src={imgLinkedin} alt="Linkedin"></img>
+              <FontAwesomeIcon icon={faLinkedin} className="icon-btn" />
             </div>
           </div>
         </div>
 
-        <div className="container-form"></div>
+        <div className="container-form">
+          <Form onAddData={getFormData} />
+        </div>
       </div>
     </Container>
   );

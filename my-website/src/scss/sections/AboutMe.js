@@ -1,12 +1,16 @@
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faEnvelope,
+  faLocation,
+} from "@fortawesome/free-solid-svg-icons";
+
 import Container from "../components/Container";
 import "./_AboutMe.scss";
 
 import imgAbout from "../../image/icons-illustrations/questions.png";
-import location from "../../image/icons-illustrations/location.png";
-import phone from "../../image/icons-illustrations/phone.png";
-import email from "../../image/icons-illustrations/email.png";
 
 function AboutMe() {
   const handleClick = (e, targetId) => {
@@ -53,7 +57,7 @@ function AboutMe() {
             <div className="info-contact">
               <div className="information">
                 <div className="info-img">
-                  <img src={location} alt="location icon"></img>
+                  <FontAwesomeIcon icon={faLocation} className="icon" />
                 </div>
                 <Link onClick={openLocationHandler} className="info-text">
                   Cluj-Napoca, Romania
@@ -61,7 +65,7 @@ function AboutMe() {
               </div>
               <div className="information">
                 <div className="info-img">
-                  <img src={phone} alt="phone icon"></img>
+                  <FontAwesomeIcon icon={faPhone} className="icon" />
                 </div>
                 <Link to="tel:+40745667893" className="info-text">
                   +4074540923
@@ -69,7 +73,7 @@ function AboutMe() {
               </div>
               <div className="information">
                 <div className="info-img">
-                  <img src={email} alt="email icon"></img>
+                  <FontAwesomeIcon icon={faEnvelope} className="icon" />
                 </div>
                 <Link to="mailto:elena.hudrea@yahoo.com" className="info-text">
                   elena.hudrea@yahoo.com

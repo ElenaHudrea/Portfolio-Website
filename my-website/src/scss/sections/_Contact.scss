@@ -2,6 +2,7 @@
 @import "../shared/buttons";
 
 .contact-component {
+  padding: 0 2rem;
   margin-bottom: 10rem;
   display: flex;
   gap: 8rem;
@@ -15,6 +16,14 @@
     font-size: 6rem;
     color: $primary-color;
     font-weight: 500;
+
+    @media screen and (max-width: $sm-screen-max) {
+      text-align: center;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      font-size: 4rem;
+    }
   }
 
   .description {
@@ -26,14 +35,52 @@
   .info-contact {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin: 3rem 0 3rem 0;
+    gap: 2rem;
+    margin: 3rem 0;
+
+    @media screen and (max-width: $sm-screen) {
+      margin: 1rem 0;
+      gap: 1rem;
+    }
   }
 
   .information {
     display: flex;
     gap: 1rem;
     align-items: center;
+
+    @media screen and (max-width: $sm-screen-max) {
+      margin: 0 auto;
+    }
+  }
+
+  .info-img {
+    .icon {
+      color: $primary-color;
+      width: 2.5rem;
+      height: 2.5rem;
+
+      @media screen and (max-width: $sm-screen) {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+
+  .icon-btn {
+    color: $primary-color;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color-hover;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 
   .info-text {
@@ -47,7 +94,12 @@
 
   .buttons-container {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
+
+    @media screen and (max-width: $sm-screen-max) {
+      gap: 1rem;
+      margin: 0 auto;
+    }
   }
 
   .container-form {
@@ -55,5 +107,13 @@
     width: 100%;
     border: 0.2rem solid $primary-color;
     border-radius: 1rem;
+
+    @media screen and (max-width: $sm-screen-max) {
+      margin: 0 auto;
+    }
+
+    @media screen and (max-width: $sm-screen) {
+      max-width: 100%;
+    }
   }
 }

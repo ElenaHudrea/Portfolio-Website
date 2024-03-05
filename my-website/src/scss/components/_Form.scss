@@ -1,0 +1,92 @@
+@import "../shared/variables";
+@import "../shared/buttons";
+
+.form-component {
+  margin: 0 auto;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: space-between;
+
+  .form-text-box {
+    padding: 3rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .cta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .error {
+    color: red !important;
+    font-size: 1.2rem !important;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    width: 100%;
+
+    label {
+      font-size: 1.6rem;
+      color: $color-black;
+
+      .icon {
+        color: $primary-color;
+        margin-right: 0.8rem;
+      }
+    }
+
+    input,
+    textarea {
+      border-radius: 0.6rem;
+      background-color: $blue-light;
+      padding: 1.5rem;
+      color: $color-black;
+      outline: none;
+      border: none;
+
+      &::placeholder {
+        color: $color-gray;
+      }
+
+      &:focus {
+        border: 0.1rem solid $primary-color;
+      }
+
+      &.error {
+        border: 0.3rem solid red;
+        font-weight: 500;
+        color: red;
+      }
+    }
+  }
+
+  .btn {
+    border: none;
+    border-radius: 0.6rem;
+    background-color: $primary-color;
+    padding: 1.5rem;
+    color: $color-white;
+    cursor: pointer;
+    font-size: 1.8rem;
+
+    &:hover {
+      background-color: $primary-color-hover;
+    }
+  }
+
+  .message {
+    color: #222;
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}

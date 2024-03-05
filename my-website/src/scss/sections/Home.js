@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 import Container from "../components/Container";
 import "./_Home.scss";
 import imgHero from "../../image/sections-img/heroImg.png";
-import imgGitHub from "../../image/icons-illustrations/gitHub.png";
-import imgLinkedin from "../../image/icons-illustrations/linkedin.png";
 
 function Home() {
   const handleClick = (e, targetId) => {
@@ -57,10 +58,10 @@ function Home() {
 
           <div className="buttons-container">
             <div onClick={openGitHubHandler} className="profiles">
-              <img src={imgGitHub} alt="GitHub"></img>
+              <FontAwesomeIcon icon={faGithub} className="icon-btn" />
             </div>
             <div onClick={openLinkedinHandler} className="profiles">
-              <img src={imgLinkedin} alt="Linkedin"></img>
+              <FontAwesomeIcon icon={faLinkedin} className="icon-btn" />
             </div>
 
             <div onClick={downloadHandler} className="primary-button transp">
