@@ -2,7 +2,7 @@
 .hero-component {
   position: relative;
   display: flex;
-  padding: 5rem 2rem 0;
+  padding: 15rem 2rem 0;
   gap: 12rem;
   position: relative;
   align-items: center;
@@ -19,12 +19,6 @@
 
   @media screen and (max-width: $md-screen) {
     gap: 0rem;
-  }
-
-  .hero-description {
-    @media screen and (max-width: $sm-screen-max) {
-      text-align: center;
-    }
   }
 
   .hero-title {
@@ -51,7 +45,13 @@
   .hero-text {
     line-height: 4rem;
     margin-bottom: 3rem;
-    color: $primary-color-hover;
+    background-image: linear-gradient(
+      to left,
+      $color-black,
+      $primary-color-hover
+    );
+    color: transparent;
+    background-clip: text;
     font-size: 4rem;
 
     @media screen and (max-width: $md-screen) {
@@ -93,29 +93,9 @@
     align-items: center;
     margin-top: 6.5rem;
 
-    @media screen and (max-width: $sm-screen-max) {
-      justify-content: center;
-    }
-
     @media screen and (max-width: $sm-screen) {
       margin-top: 4rem;
       gap: 1rem;
-    }
-  }
-
-  .icon-btn {
-    color: $primary-color;
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-
-    &:hover {
-      color: $primary-color-hover;
-    }
-
-    @media screen and (max-width: $sm-screen) {
-      width: 3.5rem;
-      height: 3.5rem;
     }
   }
 }

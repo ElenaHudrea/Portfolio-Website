@@ -15,7 +15,7 @@ function Experience() {
   }
   return (
     <Container>
-      <div className="experience-component">
+      <div className="experience-component" id="experience">
         <div className="intro">
           <h2 className="title">Experience</h2>
           <p className="subtitle">Here is a quick summary of my experience</p>

@@ -30,6 +30,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .primary-button {
@@ -37,7 +38,9 @@ body {
   }
 }
 .primary-button:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
+  box-shadow: 0 0.5em 0.5em -0.4em #b1d3e3;
+  transform: translateY(-0.25em);
 }
 .primary-button.transp {
   border: 0.2rem solid #193f6e;
@@ -45,7 +48,52 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #b1d3e3;
+  background-image: linear-gradient(to left, transparent, transparent);
+}
+
+.icon-btn {
+  color: #193f6e;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+@media screen and (max-width: 768px) {
+  .icon-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img .icon {
+  color: #193f6e;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .info-img .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.info-text:hover {
+  color: #193f6e;
 }
 
 .container {
@@ -86,6 +134,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .primary-button {
@@ -93,7 +142,9 @@ body {
   }
 }
 .primary-button:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
+  box-shadow: 0 0.5em 0.5em -0.4em #b1d3e3;
+  transform: translateY(-0.25em);
 }
 .primary-button.transp {
   border: 0.2rem solid #193f6e;
@@ -101,18 +152,61 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #b1d3e3;
+  background-image: linear-gradient(to left, transparent, transparent);
+}
+
+.icon-btn {
+  color: #193f6e;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+@media screen and (max-width: 768px) {
+  .icon-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img .icon {
+  color: #193f6e;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .info-img .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.info-text:hover {
+  color: #193f6e;
 }
 
 #nav-fixed {
   margin: 0 auto;
   width: 100%;
-}
-#nav-fixed.active {
   position: fixed;
-  background-color: #222222;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
+  background-color: #fbfbfb;
 }
 
 .navigation-component {
@@ -169,50 +263,24 @@ body {
   display: inline-block;
   text-decoration: none;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #222222;
-}
-.navigation-component .link-menu.active {
-  color: #222222;
-  font-weight: 700;
-}
-.navigation-component .link-menu.change-color {
-  color: #fbfbfb;
-}
-.navigation-component .link-menu.change-color::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 0.2rem;
-  background-color: #fbfbfb;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
-  transform: scaleX(0);
-  transition: transform 0.2s ease-in-out;
-}
-.navigation-component .link-menu.change-color:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-}
-.navigation-component .link-menu.contact-page {
-  color: #fbfbfb;
+  transition: color 0.3s ease-in-out;
 }
 .navigation-component .link-menu::before {
   content: "";
   position: absolute;
+  top: 100%;
   width: 100%;
-  height: 0.2rem;
-  border-radius: 0.4rem;
-  background-color: #222222;
-  bottom: 0;
-  left: 0;
-  transform-origin: right;
+  height: 3px;
+  background-color: #3b6ba5;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
+.navigation-component .link-menu:hover {
+  color: #3b6ba5;
+}
 .navigation-component .link-menu:hover::before {
-  transform-origin: left;
   transform: scaleX(1);
 }
 .navigation-component .space {
@@ -240,7 +308,7 @@ body {
     top: 0;
     padding-bottom: 5rem;
     flex-direction: column;
-    background-color: #222222;
+    background-color: #fbfbfb;
     width: 100%;
     border-radius: 0 0 1rem 1rem;
     text-align: center;
@@ -277,18 +345,18 @@ body {
     cursor: pointer;
   }
   .navigation-component .link-menu {
-    color: #fbfbfb;
+    color: #222222;
     font-weight: 500;
   }
   .navigation-component .link-menu.active {
-    color: #fbfbfb;
+    color: #193f6e;
   }
   .navigation-component .link-menu::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 0.2rem;
-    background-color: #fbfbfb;
+    background-color: #222222;
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -327,6 +395,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .primary-button {
@@ -334,7 +403,9 @@ body {
   }
 }
 .primary-button:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
+  box-shadow: 0 0.5em 0.5em -0.4em #b1d3e3;
+  transform: translateY(-0.25em);
 }
 .primary-button.transp {
   border: 0.2rem solid #193f6e;
@@ -342,7 +413,52 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #b1d3e3;
+  background-image: linear-gradient(to left, transparent, transparent);
+}
+
+.icon-btn {
+  color: #193f6e;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+@media screen and (max-width: 768px) {
+  .icon-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img .icon {
+  color: #193f6e;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .info-img .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.info-text:hover {
+  color: #193f6e;
 }
 
 .form-component {
@@ -417,7 +533,7 @@ body {
   font-size: 1.8rem;
 }
 .form-component .btn:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
 }
 .form-component .message {
   color: #222;
@@ -439,6 +555,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .primary-button {
@@ -446,7 +563,9 @@ body {
   }
 }
 .primary-button:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
+  box-shadow: 0 0.5em 0.5em -0.4em #b1d3e3;
+  transform: translateY(-0.25em);
 }
 .primary-button.transp {
   border: 0.2rem solid #193f6e;
@@ -454,12 +573,57 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #b1d3e3;
+  background-image: linear-gradient(to left, transparent, transparent);
+}
+
+.icon-btn {
+  color: #193f6e;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+@media screen and (max-width: 768px) {
+  .icon-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img .icon {
+  color: #193f6e;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .info-img .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.info-text:hover {
+  color: #193f6e;
 }
 
 .about-me-component {
   padding: 22% 0;
-  height: 65rem;
+  height: 55rem;
   background: url("../../image/sections-img/wave-top.png") top/100% auto, url("../../image/sections-img/wave-bottom.png") bottom/100% auto, linear-gradient(#b1d3e3, #b1d3e3) content-box;
   background-repeat: no-repeat;
 }
@@ -477,22 +641,29 @@ body {
 .about-me-component .title {
   font-size: 6rem;
   font-weight: 500;
-  text-align: center;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 2rem auto;
+  margin-bottom: 6rem;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
-.about-me-component .title::after {
-  content: url("../../image/icons-illustrations/line.svg");
+.about-me-component .title::before {
   position: absolute;
-  bottom: -5.5rem;
   left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 0.3rem;
+  content: "";
+  background-color: #193f6e;
 }
 @media screen and (max-width: 768px) {
   .about-me-component .title {
     font-size: 4rem;
     margin-top: 5rem;
+    margin-bottom: 2.5rem;
   }
 }
 .about-me-component .content {
@@ -505,7 +676,7 @@ body {
   .about-me-component .content {
     flex-direction: column-reverse;
     gap: 5rem;
-    margin-top: 5rem;
+    margin-top: 2rem;
   }
 }
 .about-me-component .container-img {
@@ -518,7 +689,7 @@ body {
   height: 100%;
 }
 .about-me-component .text {
-  border-bottom: 0.3rem solid #193f6e;
+  border-bottom: 0.1rem solid #193f6e;
   padding-bottom: 1rem;
   position: relative;
 }
@@ -526,33 +697,11 @@ body {
   color: #193f6e;
   font-weight: 500;
 }
-@media screen and (max-width: 991px) {
-  .about-me-component .text {
-    text-align: center;
-  }
-}
 .about-me-component .info-contact {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin: 3rem 0 3rem 0;
-}
-.about-me-component .information {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.about-me-component .info-text {
-  text-decoration: none;
-  color: #222222;
-}
-.about-me-component .info-text:hover {
-  color: #193f6e;
-}
-.about-me-component .icon {
-  color: #193f6e;
-  width: 2.5rem;
-  height: 2.5rem;
 }
 .about-me-component .description {
   width: 50%;
@@ -579,6 +728,7 @@ body {
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 }
 @media screen and (max-width: 768px) {
   .primary-button {
@@ -586,7 +736,9 @@ body {
   }
 }
 .primary-button:hover {
-  background-color: #3b6ba5;
+  background-image: linear-gradient(to left, #193f6e, #3b6ba5);
+  box-shadow: 0 0.5em 0.5em -0.4em #b1d3e3;
+  transform: translateY(-0.25em);
 }
 .primary-button.transp {
   border: 0.2rem solid #193f6e;
@@ -594,7 +746,52 @@ body {
   color: #193f6e;
 }
 .primary-button.transp:hover {
-  background-color: #b1d3e3;
+  background-image: linear-gradient(to left, transparent, transparent);
+}
+
+.icon-btn {
+  color: #193f6e;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+}
+.icon-btn:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+@media screen and (max-width: 768px) {
+  .icon-btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img .icon {
+  color: #193f6e;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 768px) {
+  .info-img .icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: #222222;
+}
+.info-text:hover {
+  color: #193f6e;
 }
 
 .contact-component {
@@ -611,13 +808,11 @@ body {
 }
 .contact-component .title {
   font-size: 6rem;
-  color: #193f6e;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
   font-weight: 500;
-}
-@media screen and (max-width: 991px) {
-  .contact-component .title {
-    text-align: center;
-  }
 }
 @media screen and (max-width: 768px) {
   .contact-component .title {
@@ -641,49 +836,6 @@ body {
     gap: 1rem;
   }
 }
-.contact-component .information {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-@media screen and (max-width: 991px) {
-  .contact-component .information {
-    margin: 0 auto;
-  }
-}
-.contact-component .info-img .icon {
-  color: #193f6e;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-@media screen and (max-width: 768px) {
-  .contact-component .info-img .icon {
-    width: 2rem;
-    height: 2rem;
-  }
-}
-.contact-component .icon-btn {
-  color: #193f6e;
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-}
-.contact-component .icon-btn:hover {
-  color: #3b6ba5;
-}
-@media screen and (max-width: 768px) {
-  .contact-component .icon-btn {
-    width: 3rem;
-    height: 3rem;
-  }
-}
-.contact-component .info-text {
-  text-decoration: none;
-  color: #222222;
-}
-.contact-component .info-text:hover {
-  color: #193f6e;
-}
 .contact-component .buttons-container {
   display: flex;
   gap: 2rem;
@@ -691,7 +843,6 @@ body {
 @media screen and (max-width: 991px) {
   .contact-component .buttons-container {
     gap: 1rem;
-    margin: 0 auto;
   }
 }
 .contact-component .container-form {
@@ -718,8 +869,13 @@ body {
   padding: 0 2rem;
   margin-bottom: 20rem;
 }
+@media screen and (max-width: 768px) {
+  .experience-component {
+    margin-bottom: 12rem;
+  }
+}
 .experience-component .intro {
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 }
 @media screen and (max-width: 768px) {
   .experience-component .intro {
@@ -729,11 +885,14 @@ body {
 .experience-component .title {
   font-size: 6rem;
   font-weight: 500;
-  text-align: center;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 2rem auto;
+  margin: 0 0 1.5rem 0;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media screen and (max-width: 768px) {
   .experience-component .title {
@@ -743,7 +902,17 @@ body {
 }
 .experience-component .subtitle {
   font-size: 1.8rem;
-  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.experience-component .subtitle::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 0.3rem;
+  content: "";
+  background-color: #193f6e;
 }
 .experience-component .experience-container {
   border: 0.2rem solid #193f6e;
@@ -817,7 +986,7 @@ body {
 .hero-component {
   position: relative;
   display: flex;
-  padding: 5rem 2rem 0;
+  padding: 15rem 2rem 0;
   gap: 12rem;
   position: relative;
   align-items: center;
@@ -837,11 +1006,6 @@ body {
 @media screen and (max-width: 992px) {
   .hero-component {
     gap: 0rem;
-  }
-}
-@media screen and (max-width: 991px) {
-  .hero-component .hero-description {
-    text-align: center;
   }
 }
 .hero-component .hero-title {
@@ -868,7 +1032,10 @@ body {
 .hero-component .hero-text {
   line-height: 4rem;
   margin-bottom: 3rem;
-  color: #3b6ba5;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
   font-size: 4rem;
 }
 @media screen and (max-width: 992px) {
@@ -908,30 +1075,10 @@ body {
   align-items: center;
   margin-top: 6.5rem;
 }
-@media screen and (max-width: 991px) {
-  .hero-component .buttons-container {
-    justify-content: center;
-  }
-}
 @media screen and (max-width: 768px) {
   .hero-component .buttons-container {
     margin-top: 4rem;
     gap: 1rem;
-  }
-}
-.hero-component .icon-btn {
-  color: #193f6e;
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-}
-.hero-component .icon-btn:hover {
-  color: #3b6ba5;
-}
-@media screen and (max-width: 768px) {
-  .hero-component .icon-btn {
-    width: 3.5rem;
-    height: 3.5rem;
   }
 }
 
@@ -942,8 +1089,13 @@ body {
   padding: 0 2rem;
   margin-bottom: 20rem;
 }
+@media screen and (max-width: 768px) {
+  .skills-component {
+    margin-bottom: 12rem;
+  }
+}
 .skills-component .intro {
-  margin-bottom: 8rem;
+  margin-bottom: 6rem;
 }
 @media screen and (max-width: 768px) {
   .skills-component .intro {
@@ -953,11 +1105,14 @@ body {
 .skills-component .title {
   font-size: 6rem;
   font-weight: 500;
-  text-align: center;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-  margin: 0 auto 2rem auto;
+  margin-bottom: 1.5rem;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 @media screen and (max-width: 768px) {
   .skills-component .title {
@@ -967,7 +1122,17 @@ body {
 }
 .skills-component .subtitle {
   font-size: 1.8rem;
-  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.skills-component .subtitle::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 0.3rem;
+  content: "";
+  background-color: #193f6e;
 }
 .skills-component .skills-container {
   display: grid;

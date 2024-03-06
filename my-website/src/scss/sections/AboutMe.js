@@ -38,14 +38,13 @@ function AboutMe() {
   return (
     <div className="about-me-component" id="about-me">
       <Container>
-        <h2 className="title">About Me</h2>
-
         <div className="content">
           <div className="container-img">
             <img src={imgAbout} alt="" />
           </div>
 
           <div className="description">
+            <h2 className="title">About Me</h2>
             <p className="text">
               I’m Elena Hudrea, a
               <span className="accent-blue"> Junior Frontend Developer</span>{" "}

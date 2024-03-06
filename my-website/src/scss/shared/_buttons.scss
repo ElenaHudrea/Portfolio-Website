@@ -7,13 +7,21 @@
   font-weight: 400;
   white-space: nowrap;
   cursor: pointer;
+  position: relative;
 
   @media screen and (max-width: $sm-screen) {
     font-size: 1.4rem;
   }
 
   &:hover {
-    background-color: $primary-color-hover;
+    background-image: linear-gradient(
+      to left,
+      $primary-color,
+      $primary-color-hover
+    );
+
+    box-shadow: 0 0.5em 0.5em -0.4em $blue-light;
+    transform: translateY(-0.25em);
   }
 
   &.transp {
@@ -22,7 +30,53 @@
     color: $primary-color;
 
     &:hover {
-      background-color: $blue-light;
+      background-image: linear-gradient(to left, transparent, transparent);
     }
+  }
+}
+
+.icon-btn {
+  color: $primary-color;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $primary-color-hover;
+    background-clip: text;
+    transform: translateY(-0.25em);
+  }
+
+  @media screen and (max-width: $sm-screen) {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.information {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.info-img {
+  .icon {
+    color: $primary-color;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    @media screen and (max-width: $sm-screen) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.info-text {
+  text-decoration: none;
+  color: $color-black;
+
+  &:hover {
+    color: $primary-color;
   }
 }

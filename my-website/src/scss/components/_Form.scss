@@ -77,7 +77,11 @@
     font-size: 1.8rem;
 
     &:hover {
-      background-color: $primary-color-hover;
+      background-image: linear-gradient(
+        to left,
+        $primary-color,
+        $primary-color-hover
+      );
     }
   }
 

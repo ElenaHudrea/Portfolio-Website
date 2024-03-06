@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import "./_Navigation.scss";
 import logo from "../../image/logo/logoBlue.png";
 import Container from "./Container";
 
 function Navigation() {
+  const [isActive, setActive] = useState(false);
+
+  function toggleMobileMenu() {
+    setActive(!isActive);
+  }
+
   const handleClick = (e, targetId) => {
     e.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -14,8 +21,8 @@ function Navigation() {
   };
 
   return (
-    <Container>
-      <nav className="navigation-component">
+    <nav className="navigation-component" id="nav-fixed">
+      <Container>
         <div className="elements-nav">
           <Link
             to="#home"
@@ -25,7 +32,7 @@ function Navigation() {
             <img src={logo} alt="Logo"></img>
           </Link>
 
-          <div className="menu">
+          <div className={`menu ${isActive ? "active" : ""}`}>
             <ul className="list">
               <li className="list-link">
                 <Link
@@ -82,14 +89,17 @@ function Navigation() {
               Contact
             </Link>
           </div>
-          <div className="hamburger">
+          <div
+            className={`hamburger ${isActive ? "active" : ""}`}
+            onClick={toggleMobileMenu}
+          >
             <span className="bar"></span>
             <span className="bar"></span>
             <span className="bar"></span>
           </div>
         </div>
-      </nav>
-    </Container>
+      </Container>
+    </nav>
   );
 }
 

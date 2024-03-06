@@ -14,12 +14,14 @@
 
   .title {
     font-size: 6rem;
-    color: $primary-color;
+    background-image: linear-gradient(
+      to left,
+      $color-black,
+      $primary-color-hover
+    );
+    color: transparent;
+    background-clip: text;
     font-weight: 500;
-
-    @media screen and (max-width: $sm-screen-max) {
-      text-align: center;
-    }
 
     @media screen and (max-width: $sm-screen) {
       font-size: 4rem;
@@ -44,61 +46,12 @@
     }
   }
 
-  .information {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-
-    @media screen and (max-width: $sm-screen-max) {
-      margin: 0 auto;
-    }
-  }
-
-  .info-img {
-    .icon {
-      color: $primary-color;
-      width: 2.5rem;
-      height: 2.5rem;
-
-      @media screen and (max-width: $sm-screen) {
-        width: 2rem;
-        height: 2rem;
-      }
-    }
-  }
-
-  .icon-btn {
-    color: $primary-color;
-    width: 4rem;
-    height: 4rem;
-    cursor: pointer;
-
-    &:hover {
-      color: $primary-color-hover;
-    }
-
-    @media screen and (max-width: $sm-screen) {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
-
-  .info-text {
-    text-decoration: none;
-    color: $color-black;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
   .buttons-container {
     display: flex;
     gap: 2rem;
 
     @media screen and (max-width: $sm-screen-max) {
       gap: 1rem;
-      margin: 0 auto;
     }
   }
 

@@ -17,7 +17,7 @@ import php from "../../image/icons-illustrations/php.png";
 function Skills() {
   return (
     <Container>
-      <div className="skills-component">
+      <div className="skills-component" id="skills">
         <div className="intro">
           <h2 className="title">Skills</h2>
           <p className="subtitle">
