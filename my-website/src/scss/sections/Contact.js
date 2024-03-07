@@ -10,6 +10,7 @@ import {
 
 import Container from "../components/Container";
 import Form from "../components/Form";
+import Intro from "../components/Intro";
 import "./_Contact.scss";
 
 function Contact() {
@@ -44,7 +45,7 @@ function Contact() {
     <Container>
       <div className="contact-component" id="contact">
         <div className="description">
-          <h3 className="title">Let’s discuss on something Cool together</h3>
+          <Intro title="Let’s discuss on something Cool together" subtitle="" />
 
           <div className="info-contact">
             <div className="information">

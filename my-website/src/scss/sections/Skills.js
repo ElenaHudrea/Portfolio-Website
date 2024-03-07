@@ -13,18 +13,17 @@ import sass from "../../image/icons-illustrations/sass.png";
 import visualStudio from "../../image/icons-illustrations/visualStudio.png";
 import xampp from "../../image/icons-illustrations/xampp.png";
 import php from "../../image/icons-illustrations/php.png";
+import Intro from "../components/Intro";
 
 function Skills() {
   return (
     <Container>
       <div className="skills-component" id="skills">
-        <div className="intro">
-          <h2 className="title">Skills</h2>
-          <p className="subtitle">
-            Below you can find the skills, tools and technologies I worked until
-            now
-          </p>
-        </div>
+        <Intro
+          title="Skills"
+          subtitle=" Below you can find the skills, tools and technologies I worked until
+          now"
+        />
 
         <div className="skills-container">
           <div className="skill">

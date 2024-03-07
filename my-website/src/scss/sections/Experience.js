@@ -4,6 +4,7 @@ import "./_Experience.scss";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faLink } from "@fortawesome/free-solid-svg-icons";
+import Intro from "../components/Intro";
 
 function Experience() {
   function openLocationHandler() {
@@ -16,10 +17,10 @@ function Experience() {
   return (
     <Container>
       <div className="experience-component" id="experience">
-        <div className="intro">
-          <h2 className="title">Experience</h2>
-          <p className="subtitle">Here is a quick summary of my experience</p>
-        </div>
+        <Intro
+          title="Experience"
+          subtitle="Here is a quick summary of my experience"
+        />
 
         <div className="experience-container">
           <div className="job">

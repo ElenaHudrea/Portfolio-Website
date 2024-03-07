@@ -8,50 +8,6 @@
     margin-bottom: 12rem;
   }
 
-  .intro {
-    margin-bottom: 6rem;
-
-    @media screen and (max-width: $sm-screen) {
-      margin-bottom: 4rem;
-    }
-  }
-
-  .title {
-    font-size: 6rem;
-    font-weight: 500;
-    position: relative;
-    width: fit-content;
-    margin-bottom: 1.5rem;
-    background-image: linear-gradient(
-      to left,
-      $color-black,
-      $primary-color-hover
-    );
-    color: transparent;
-    background-clip: text;
-
-    @media screen and (max-width: $sm-screen) {
-      font-size: 4rem;
-      margin-top: 5rem;
-    }
-  }
-
-  .subtitle {
-    font-size: 1.8rem;
-    position: relative;
-    padding-bottom: 1rem;
-
-    &::after {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 10rem;
-      height: 0.3rem;
-      content: "";
-      background-color: $primary-color;
-    }
-  }
-
   .skills-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));

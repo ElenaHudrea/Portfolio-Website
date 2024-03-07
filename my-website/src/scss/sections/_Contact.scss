@@ -3,29 +3,17 @@
 
 .contact-component {
   padding: 0 2rem;
-  margin-bottom: 10rem;
   display: flex;
   gap: 8rem;
+  align-items: center;
 
   @media screen and (max-width: $sm-screen-max) {
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
   }
 
-  .title {
-    font-size: 6rem;
-    background-image: linear-gradient(
-      to left,
-      $color-black,
-      $primary-color-hover
-    );
-    color: transparent;
-    background-clip: text;
-    font-weight: 500;
-
-    @media screen and (max-width: $sm-screen) {
-      font-size: 4rem;
-    }
+  .intro {
+    margin-bottom: 0;
   }
 
   .description {

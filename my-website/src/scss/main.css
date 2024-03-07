@@ -94,7 +94,6 @@ body {
 }
 .info-text:hover {
   color: #193f6e;
-  font-weight: 500;
 }
 
 .container {
@@ -199,7 +198,6 @@ body {
 }
 .info-text:hover {
   color: #193f6e;
-  font-weight: 500;
 }
 
 #nav-fixed {
@@ -461,7 +459,6 @@ body {
 }
 .info-text:hover {
   color: #193f6e;
-  font-weight: 500;
 }
 
 .form-component {
@@ -549,6 +546,52 @@ body {
 /* Colors */
 /* Breakpoints */
 /* Fonts */
+.intro {
+  margin-bottom: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    margin-bottom: 4rem;
+  }
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 500;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 1.5rem 0;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.subtitle::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 0.3rem;
+  content: "";
+  background-color: #193f6e;
+}
+
+/* Colors */
+/* Breakpoints */
+/* Fonts */
 .primary-button {
   background-color: #193f6e;
   color: #fbfbfb;
@@ -622,7 +665,6 @@ body {
 }
 .info-text:hover {
   color: #193f6e;
-  font-weight: 500;
 }
 
 .about-me-component {
@@ -632,34 +674,6 @@ body {
 @media screen and (max-width: 768px) {
   .about-me-component {
     margin-bottom: 12rem;
-  }
-}
-.about-me-component .title {
-  font-size: 6rem;
-  font-weight: 500;
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 6rem;
-  background-image: linear-gradient(to left, #222222, #3b6ba5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-.about-me-component .title::before {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 10rem;
-  height: 0.3rem;
-  content: "";
-  background-color: #193f6e;
-}
-@media screen and (max-width: 768px) {
-  .about-me-component .title {
-    font-size: 4rem;
-    margin-top: 5rem;
-    margin-bottom: 2.5rem;
   }
 }
 .about-me-component .content {
@@ -788,33 +802,22 @@ body {
 }
 .info-text:hover {
   color: #193f6e;
-  font-weight: 500;
 }
 
 .contact-component {
   padding: 0 2rem;
-  margin-bottom: 10rem;
   display: flex;
   gap: 8rem;
+  align-items: center;
 }
 @media screen and (max-width: 991px) {
   .contact-component {
     flex-direction: column;
-    gap: 6rem;
+    gap: 5rem;
   }
 }
-.contact-component .title {
-  font-size: 6rem;
-  background-image: linear-gradient(to left, #222222, #3b6ba5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-  .contact-component .title {
-    font-size: 4rem;
-  }
+.contact-component .intro {
+  margin-bottom: 0;
 }
 .contact-component .description {
   display: flex;
@@ -870,46 +873,6 @@ body {
   .experience-component {
     margin-bottom: 12rem;
   }
-}
-.experience-component .intro {
-  margin-bottom: 6rem;
-}
-@media screen and (max-width: 768px) {
-  .experience-component .intro {
-    margin-bottom: 4rem;
-  }
-}
-.experience-component .title {
-  font-size: 6rem;
-  font-weight: 500;
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 0 1.5rem 0;
-  background-image: linear-gradient(to left, #222222, #3b6ba5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-@media screen and (max-width: 768px) {
-  .experience-component .title {
-    font-size: 4rem;
-    margin-top: 5rem;
-  }
-}
-.experience-component .subtitle {
-  font-size: 1.8rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-.experience-component .subtitle::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 10rem;
-  height: 0.3rem;
-  content: "";
-  background-color: #193f6e;
 }
 .experience-component .experience-container {
   border: 0.2rem solid #193f6e;
@@ -1077,6 +1040,165 @@ body {
 /* Colors */
 /* Breakpoints */
 /* Fonts */
+/* Colors */
+/* Breakpoints */
+/* Fonts */
+.intro {
+  margin-bottom: 6rem;
+}
+@media screen and (max-width: 768px) {
+  .intro {
+    margin-bottom: 4rem;
+  }
+}
+
+.title {
+  font-size: 6rem;
+  font-weight: 500;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 0 1.5rem 0;
+  background-image: linear-gradient(to left, #222222, #3b6ba5);
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+    margin-top: 5rem;
+  }
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+.subtitle::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 10rem;
+  height: 0.3rem;
+  content: "";
+  background-color: #193f6e;
+}
+
+.projects-component {
+  padding: 0 2rem;
+  margin-bottom: 20rem;
+}
+@media screen and (max-width: 768px) {
+  .projects-component {
+    margin-bottom: 12rem;
+  }
+}
+.projects-component .slider-container {
+  max-width: 75rem;
+  width: 100%;
+}
+@media screen and (max-width: 1600px) {
+  .projects-component .slider-container {
+    max-width: 60rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .projects-component .slider-container {
+    max-width: 40rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .projects-component .slider-container {
+    max-width: 80rem;
+  }
+}
+.projects-component .slider-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+}
+.projects-component .project {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+@media screen and (max-width: 991px) {
+  .projects-component .project {
+    flex-direction: column-reverse;
+    gap: 5rem;
+    margin-top: 2rem;
+  }
+}
+.projects-component .subtitle-project {
+  color: #72a5d3;
+  text-align: right;
+}
+@media screen and (max-width: 991px) {
+  .projects-component .subtitle-project {
+    text-align: left;
+  }
+}
+.projects-component .title-project {
+  font-size: 5rem;
+  margin: 1rem 0 2rem 0;
+  color: #193f6e;
+  text-align: right;
+}
+@media screen and (max-width: 991px) {
+  .projects-component .title-project {
+    text-align: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects-component .title-project {
+    font-size: 3rem;
+  }
+}
+.projects-component .description {
+  text-align: right;
+}
+@media screen and (max-width: 991px) {
+  .projects-component .description {
+    text-align: left;
+  }
+}
+.projects-component .icon {
+  margin-top: 2rem;
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  color: #193f6e;
+  float: right;
+}
+@media screen and (max-width: 768px) {
+  .projects-component .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+.projects-component .icon:hover {
+  color: #3b6ba5;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transform: translateY(-0.25em);
+}
+.projects-component .slick-dots li button::before {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #193f6e;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Colors */
+/* Breakpoints */
+/* Fonts */
 .skills-component {
   padding: 0 2rem;
   margin-bottom: 20rem;
@@ -1085,46 +1207,6 @@ body {
   .skills-component {
     margin-bottom: 12rem;
   }
-}
-.skills-component .intro {
-  margin-bottom: 6rem;
-}
-@media screen and (max-width: 768px) {
-  .skills-component .intro {
-    margin-bottom: 4rem;
-  }
-}
-.skills-component .title {
-  font-size: 6rem;
-  font-weight: 500;
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 1.5rem;
-  background-image: linear-gradient(to left, #222222, #3b6ba5);
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-@media screen and (max-width: 768px) {
-  .skills-component .title {
-    font-size: 4rem;
-    margin-top: 5rem;
-  }
-}
-.skills-component .subtitle {
-  font-size: 1.8rem;
-  position: relative;
-  padding-bottom: 1rem;
-}
-.skills-component .subtitle::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 10rem;
-  height: 0.3rem;
-  content: "";
-  background-color: #193f6e;
 }
 .skills-component .skills-container {
   display: grid;

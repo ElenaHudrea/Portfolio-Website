@@ -9,37 +9,6 @@
     margin-bottom: 12rem;
   }
 
-  .title {
-    font-size: 6rem;
-    font-weight: 500;
-    position: relative;
-    width: fit-content;
-    margin-bottom: 6rem;
-    background-image: linear-gradient(
-      to left,
-      $color-black,
-      $primary-color-hover
-    );
-    color: transparent;
-    background-clip: text;
-
-    &::before {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 10rem;
-      height: 0.3rem;
-      content: "";
-      background-color: $primary-color;
-    }
-
-    @media screen and (max-width: $sm-screen) {
-      font-size: 4rem;
-      margin-top: 5rem;
-      margin-bottom: 2.5rem;
-    }
-  }
-
   .content {
     display: flex;
     gap: 8rem;

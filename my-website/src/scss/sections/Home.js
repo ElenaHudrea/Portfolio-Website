@@ -28,13 +28,10 @@ function Home() {
   }
 
   function downloadHandler() {
-    const pdfUrl =
-      "https://github.com/ElenaHudrea/Portfolio-Website/blob/main/my-website/src/scss/HudreaElenaCV.pdf";
-    const link = document.createElement("a");
-    link.href = pdfUrl;
-    link.download = "Elena Hudrea-CV.pdf";
-
-    link.click();
+    window.open(
+      "https://firebasestorage.googleapis.com/v0/b/portfolio-website-1ad68.appspot.com/o/Hudrea%20Elean-CV.pdf?alt=media&token=a590a58f-ead6-4d1d-9669-8401906e3c2b",
+      "_blank"
+    );
   }
 
   return (
