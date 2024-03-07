@@ -38,42 +38,44 @@ function Home() {
   }
 
   return (
-    <Container>
-      <div className="hero-component" id="home">
-        <div className="hero-description">
-          <h1 className="hero-title">
-            Hello, I'm <span className="accent-blue ">Elena</span>
-          </h1>
-          <p className="hero-text">Junior Frontend Developer</p>
-          <div className="container-btn">
-            <Link
-              to="#contact"
-              onClick={(e) => handleClick(e, "contact")}
-              id="nav-btn"
-              className="primary-button"
-            >
-              Contact
-            </Link>
-          </div>
-
-          <div className="buttons-container">
-            <div onClick={openGitHubHandler} className="profiles">
-              <FontAwesomeIcon icon={faGithub} className="icon-btn" />
-            </div>
-            <div onClick={openLinkedinHandler} className="profiles">
-              <FontAwesomeIcon icon={faLinkedin} className="icon-btn" />
+    <div className="hero" id="home">
+      <Container>
+        <div className="hero-component">
+          <div className="hero-description">
+            <h1 className="hero-title">
+              Hello, I'm <span className="accent-blue ">Elena</span>
+            </h1>
+            <p className="hero-text">Junior Frontend Developer</p>
+            <div className="container-btn">
+              <Link
+                to="#contact"
+                onClick={(e) => handleClick(e, "contact")}
+                id="nav-btn"
+                className="primary-button"
+              >
+                Contact
+              </Link>
             </div>
 
-            <div onClick={downloadHandler} className="primary-button transp">
-              Download CV
+            <div className="buttons-container">
+              <div onClick={openGitHubHandler} className="profiles">
+                <FontAwesomeIcon icon={faGithub} className="icon-btn" />
+              </div>
+              <div onClick={openLinkedinHandler} className="profiles">
+                <FontAwesomeIcon icon={faLinkedin} className="icon-btn" />
+              </div>
+
+              <div onClick={downloadHandler} className="primary-button transp">
+                Download CV
+              </div>
             </div>
           </div>
+          <div className="hero-img">
+            <img src={imgHero} alt="" />
+          </div>
         </div>
-        <div className="hero-img">
-          <img src={imgHero} alt="" />
-        </div>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 }
 

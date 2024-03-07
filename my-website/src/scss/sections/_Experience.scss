@@ -82,27 +82,6 @@
     }
   }
 
-  .information {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .info-text {
-    text-decoration: none;
-    color: $color-black;
-
-    &:hover {
-      color: $primary-color;
-    }
-  }
-
-  .icon {
-    color: $primary-color;
-    width: 2.5rem;
-    height: 2.5rem;
-  }
-
   ul {
     margin-bottom: 3rem;
 

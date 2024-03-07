@@ -9,6 +9,7 @@ import Projects from "./scss/sections/Projects";
 import Contact from "./scss/sections/Contact";
 
 import Navigation from "./scss/components/Navigation";
+import Footer from "./scss/sections/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Experience />
       <Projects />
       <Contact />
+      <Footer />
 
       <Routes>
         <Route path="#Home" exact element={Home} />

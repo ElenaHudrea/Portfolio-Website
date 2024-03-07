@@ -2,20 +2,11 @@
 @import "../shared/buttons";
 
 .about-me-component {
-  padding: 22% 0;
-  height: 55rem;
-  background: url("../../image/sections-img/wave-top.png") top / 100% auto,
-    url("../../image/sections-img/wave-bottom.png") bottom/100% auto,
-    linear-gradient($blue-light, $blue-light) content-box;
-  background-repeat: no-repeat;
+  padding: 0 2rem;
+  margin-bottom: 20rem;
 
-  @media screen and (max-width: $sm-screen-max) {
-    margin-bottom: 5rem;
-    height: 105rem;
-  }
-
-  @media screen and (max-width: 420px) {
-    height: 98rem;
+  @media screen and (max-width: $sm-screen) {
+    margin-bottom: 12rem;
   }
 
   .title {

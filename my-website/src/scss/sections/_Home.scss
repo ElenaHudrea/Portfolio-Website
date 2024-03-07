@@ -1,8 +1,15 @@
 @import "../shared/variables";
+.hero {
+  padding: 0 0 24% 0;
+  background: url("../../image/sections-img/wave-bottom.png") bottom/100% auto,
+    linear-gradient($blue-light, $blue-light) content-box;
+  background-repeat: no-repeat;
+}
+
 .hero-component {
   position: relative;
   display: flex;
-  padding: 15rem 2rem 0;
+  padding: 15rem 2rem 2rem 2rem;
   gap: 12rem;
   position: relative;
   align-items: center;
@@ -84,6 +91,12 @@
 
   .container-btn {
     padding: 1.2rem 0;
+    width: fit-content;
+
+    &:hover {
+      box-shadow: 0 0.5em 0.5em -0.4em $blue-light;
+      transform: translateY(-0.25em);
+    }
   }
 
   .buttons-container {
