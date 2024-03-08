@@ -1290,7 +1290,7 @@ body {
 }
 @media screen and (max-width: 1600px) {
   .footer-component .footer-links {
-    gap: 14rem;
+    gap: 12rem;
   }
 }
 @media screen and (max-width: 1400px) {

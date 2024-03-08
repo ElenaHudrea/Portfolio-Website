@@ -22,7 +22,7 @@ const PhotoSlider = () => {
   return (
     <Slider {...sliderInfo}>
       <div>
-        <img src={project1} alt="BarberShop" />
+        <img src={project5} alt="BarberShop" />
       </div>
       <div>
         <img src={project2} alt="BarberShop" />
@@ -34,7 +34,7 @@ const PhotoSlider = () => {
         <img src={project4} alt="BarberShop" />
       </div>
       <div>
-        <img src={project5} alt="BarberShop" />
+        <img src={project1} alt="BarberShop" />
       </div>
     </Slider>
   );

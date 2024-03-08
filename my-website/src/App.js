@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 
 import "./App.css";
 import Home from "./scss/sections/Home";
@@ -7,21 +8,23 @@ import Skills from "./scss/sections/Skills";
 import Experience from "./scss/sections/Experience";
 import Projects from "./scss/sections/Projects";
 import Contact from "./scss/sections/Contact";
-
-import Navigation from "./scss/components/Navigation";
-import Footer from "./scss/sections/Footer";
+import Loading from "./scss/components/Loading";
+import MainComponent from "./scss/sections/MainComponent";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div>
-      <Navigation />
-      <Home />
-      <AboutMe />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
-      <Footer />
+      {isLoading ? <Loading /> : <MainComponent />}
 
       <Routes>
         <Route path="#Home" exact element={Home} />

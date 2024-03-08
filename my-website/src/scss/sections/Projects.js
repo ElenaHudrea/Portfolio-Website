@@ -11,7 +11,7 @@ function Projects() {
   }
   return (
     <Container>
-      <div className="projects-component">
+      <div className="projects-component" id="projects">
         <Intro title="Some things I've Built" subtitle="" />
 
         <div className="project">
