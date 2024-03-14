@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 import Container from "../components/Container";
-import Form from "../components/Form";
+import FormContact from "../components/Form";
 import Intro from "../components/Intro";
 import "./_Contact.scss";
 
@@ -80,7 +80,7 @@ function Contact() {
         </div>
 
         <div className="container-form">
-          <Form onAddData={getFormData} />
+          <FormContact onAddData={getFormData} />
         </div>
       </div>
     </Container>

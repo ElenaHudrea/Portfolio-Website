@@ -42,14 +42,17 @@ function AboutMe() {
           </div>
 
           <div className="description">
-            <Intro title="About me" subtitle="" />
+            <Intro
+              title="About me"
+              subtitle="Below you can find some information about my passion"
+            />
             <p className="text">
               I’m Elena Hudrea, a
               <span className="accent-blue"> Junior Frontend Developer</span>{" "}
               with a deep passion for this field. I found this passion a few
               years ago and since then I have been in continuous learning. I
               have cultivated various skills that help me pay great attention to
-              details.
+              details
             </p>
             <div className="info-contact">
               <div className="information">

@@ -105,12 +105,12 @@ function Footer() {
               <p className="title-list">Contact Me</p>
               <div className="information">
                 <Link to="tel:+40745667893" className="item-list">
-                  Phone: +4074540923
+                  +4074540923
                 </Link>
               </div>
               <div className="information">
                 <Link to="mailto:elena.hudrea@yahoo.com" className="item-list">
-                  Email: elena.hudrea@yahoo.com
+                  elena.hudrea@yahoo.com
                 </Link>
               </div>
             </div>

@@ -13,7 +13,6 @@
   font-weight: 500;
   position: relative;
   width: fit-content;
-  margin: 0 0 1.5rem 0;
   background-image: linear-gradient(
     to left,
     $color-black,
@@ -32,6 +31,7 @@
   font-size: 1.8rem;
   position: relative;
   padding-bottom: 1rem;
+  margin-top: 1.5rem;
 
   &::after {
     position: absolute;
